@@ -53,6 +53,6 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
 
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException authResult) throws IOException, ServletException {
-
+        ResponseUtil.out(response, R.error());
     }
 }
